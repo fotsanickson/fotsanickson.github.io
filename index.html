@@ -1,641 +1,710 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nickson FOTSA — Élève-ingénieur ASTRE</title>
-<meta name="description" content="Portfolio de Nickson FOTSA — systèmes embarqués, IoT, robotique et développement logiciel.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nickson FOTSA — Élève-ingénieur ASTRE</title>
+    <meta name="description" content="Portfolio de Nickson FOTSA — systèmes embarqués, IoT, robotique et développement logiciel.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
 
-<!--
-  CONVENTION ASSETS :
-  /hero.mp4                      -> vidéo de fond du hero
-  /icons/{slug}.svg              -> logos de compétences + icônes github.svg / play.svg / launch.svg
-  /logos-etablissements/{slug}.png -> logos des écoles (fond transparent de préférence)
-  /logos-entreprises/{slug}.png  -> logos des entreprises
-  /projects/{slug}.jpg           -> image de fond de chaque projet
-  /cv/Nickson_FOTSA.pdf          -> CV téléchargeable
--->
+  <!--
+    CONVENTION ASSETS :
+    /hero.mp4                      -> vidéo de fond du hero
+    /icons/{slug}.svg              -> logos de compétences + icônes github.svg / play.svg / launch.svg
+    /logos-etablissements/{slug}.png -> logos des écoles (fond transparent de préférence)
+    /logos-entreprises/{slug}.png  -> logos des entreprises
+    /projects/{slug}.jpg           -> image de fond de chaque projet
+    /cv/Nickson_FOTSA.pdf          -> CV téléchargeable
+  -->
 
-<nav class="nav" id="nav">
-  <div class="nav-inner">
-    <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu">☰</button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#parcours" data-section="parcours">parcours</a></li>
-      <li><a href="#competences" data-section="competences">competences</a></li>
-      <li><a href="#projets" data-section="projets">projets</a></li>
-      <li><a href="#experiences" data-section="experiences">experiences</a></li>
-      <li><a href="#contact" data-section="contact">contact</a></li>
-    </ul>
-  </div>
-</nav>
-
-<!-- ============================================
-     HERO
-     ============================================ -->
-<header class="hero" id="hero">
-  <video class="hero-video" autoplay muted loop playsinline webkit-playsinline>
-    <source src="medias/hero.mp4" type="video/mp4">
-  </video>
-  <script>
-    document.querySelector('.hero-video').play().catch(function(){});
-  </script>
-  <div class="hero-overlay"></div>
-
-  <div class="hero-inner">
-    <!-- Ce tag est à mettre à jour toi-même selon ta situation du moment -->
-    <span class="status-tag"><span class="dot"></span>en alternance à GMP — dès septembre 2026</span>
-
-    <h1 class="hero-name">Nickson FOTSA</h1>
-    <p class="hero-title">Élève-ingénieur ASTRE — systèmes embarqués & IoT</p>
-
-    <p class="hero-about">
-      Curieux par nature, j’aime explorer, chercher et comprendre ce qui se trouve derrière les systèmes que j’utilise.
-      Aujourd’hui en alternance dans le domaine de l’embarqué, je m’intéresse autant au firmware et aux communications qu’à l’IoT, au cloud et aux interfaces. Mon objectif : continuer à découvrir, expérimenter et construire.
-
-    </p>
-
-    <a href="nickson_fotsa.pdf" download class="btn">télécharger mon CV ↓</a>
-  </div>
-
-  <div class="scroll-hint" aria-hidden="true"><span>scroll</span><div class="line"></div></div>
-</header>
-
-<!-- ============================================
-     PARCOURS — formations en tuiles (ordre chronologique)
-     ============================================ -->
-<section id="parcours">
-  <div class="container">
-    <span class="eyebrow">01</span>
-    <h2 class="section-title">Parcours</h2>
-
-    <div class="grid-cards" id="formationsGrid">
-
-      <!-- Formation 3 — ENSIM -->
-      <article class="tile" tabindex="0" role="button" aria-expanded="false">
-        <div class="tile-thumb logo-center">
-          <img class="logo" src="medias/etablissements/ensim.png" alt="ENSIM" onerror="this.style.display='none';">
-          <div class="thumb-caption">
-            <span class="cat">2025 — présent</span>
-            <span class="title">Ingénieur ASTRE</span>
-          </div>
-        </div>
-        <div class="tile-detail">
-          <button class="tile-back" type="button">← réduire</button>
-          <div class="tile-detail-inner">
-            <span class="tile-meta">ENSIM — Architecture des Systèmes Temps Réel et Embarqués</span>
-            <ul class="tile-list">
-              <li>Linux embarqué — driver development — développement web</li>
-              <li>Développement algorithmique — conception d'IHM</li>
-              <li>Communication réseau & protocoles IP — gestion de projets</li>
-            </ul>
-            <p class="tile-objective">Cette formation m'permet d'approfondir la conception de systèmes temps réel embarqués, du driver bas niveau jusqu'à l'interface web, avec une vision système complète — réseau, IHM, gestion de projet.</p>
-            <div class="tile-footer">
-              <a href="https://ensim.univ-lemans.fr/fr/index.html" target="_blank" rel="noopener" class="text-link">site de l'établissement</a>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- Formation 2 — IUT Bandjoun -->
-      <article class="tile" tabindex="0" role="button" aria-expanded="false">
-        <div class="tile-thumb logo-center">
-          <img class="logo" src="medias/etablissements/iut.png" alt="IUT Bandjoun" onerror="this.style.display='none';">
-          <div class="thumb-caption">
-            <span class="cat">2023 — 2025</span>
-            <span class="title">DUT Génie Électrique & Informatique Industrielle</span>
-          </div>
-        </div>
-        <div class="tile-detail">
-          <button class="tile-back" type="button">← réduire</button>
-          <div class="tile-detail-inner">
-            <span class="tile-meta">IUT Bandjoun</span>
-            <ul class="tile-list">
-              <li>Automates (TIA Portal, Siemens, Zelio) — électronique de puissance — machines électriques</li>
-              <li>Langages C/C++ — microcontrôleurs (AVR, PIC) — bases de données SQL — supervision SCADA</li>
-            </ul>
-            <p class="tile-objective">Cette formation a posé mes bases concrètes en automatisme industriel et en électrotechnique — lecture de schémas, programmation d'automates, premiers langages bas niveau — avant d'aller plus loin dans l'embarqué.</p>
-            <div class="tile-footer">
-              <a href="https://www.univ-dschang.org/iutfv/" target="_blank" rel="noopener" class="text-link">site de l'établissement</a>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- Formation 1 — Yaoundé I -->
-      <article class="tile" tabindex="0" role="button" aria-expanded="false">
-        <div class="tile-thumb logo-center">
-          <img class="logo" src="medias/etablissements/uy1.png" alt="Université de Yaoundé I" onerror="this.style.display='none';">
-          <div class="thumb-caption">
-            <span class="cat">2022 — 2023</span>
-            <span class="title">L1 Physique — Sciences Fondamentales</span>
-          </div>
-        </div>
-        <div class="tile-detail">
-          <button class="tile-back" type="button">← réduire</button>
-          <div class="tile-detail-inner">
-            <span class="tile-meta">Université de Yaoundé I</span>
-            <ul class="tile-list">
-              <li>Mécanique du point, électromagnétisme, optique géométrique, thermodynamique</li>
-              <li>Analyse réelle, algèbre linéaire, probabilités & statistiques, calcul numérique</li>
-            </ul>
-            <p class="tile-objective">Cette année de physique fondamentale a construit ma rigueur scientifique et mathématique — le socle indispensable avant d'aborder l'ingénierie appliquée.</p>
-            <div class="tile-footer">
-              <a href="https://uy1.uninet.cm/" target="_blank" rel="noopener" class="text-link">site de l'établissement</a>
-            </div>
-          </div>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- ============================================
-     COMPETENCES — icônes nues par couche
-     ============================================ -->
-<section id="competences">
-  <div class="container">
-    <span class="eyebrow">02</span>
-    <h2 class="section-title">Compétences</h2>
-
-    <div class="skill-layer">
-      <span class="skill-layer-title">matériel / bas niveau</span>
-      <div class="skill-grid">
-        <span class="skill-item"><img src="medias/icons/cplusplus.png" alt=""><span>C++</span></span>
-        <span class="skill-item"><img src="medias/icons/c.svg" alt=""><span>C</span></span>
-        <span class="skill-item"><img src="medias/icons/stm32.svg" alt=""><span>STM32</span></span>
-        <span class="skill-item"><img src="medias/icons/esp32.png" alt=""><span>ESP32</span></span>
-        <span class="skill-item"><img src="medias/icons/arduino.png" alt=""><span>Arduino</span></span>
-        <span class="skill-item"><img src="medias/icons/asm.png" alt=""><span>Assembleur</span></span>
-        <span class="skill-item"><img src="medias/icons/rs485.png" alt=""><span>RS485/CAN</span></span>
-        <span class="skill-item"><img src="medias/icons/linux.png" alt=""><span>Linux</span></span>
+    <nav class="nav" id="nav">
+      <div class="nav-inner">
+        <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu">☰</button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#parcours" data-section="parcours">parcours</a></li>
+          <li><a href="#certifications" data-section="certifications">certifications</a></li>
+          <li><a href="#competences" data-section="competences">competences</a></li>
+          <li><a href="#projets" data-section="projets">projets</a></li>
+          <li><a href="#experiences" data-section="experiences">experiences</a></li>
+          <li><a href="#contact" data-section="contact">contact</a></li>
+        </ul>
       </div>
-    </div>
+    </nav>
 
-    <div class="skill-layer">
-      <span class="skill-layer-title">réseau / communication</span>
-      <div class="skill-grid">
-        <span class="skill-item"><img src="medias/icons/mqtt.png" alt=""><span>MQTT</span></span>
-        <span class="skill-item"><img src="medias/icons/tcp.png" alt=""><span>TCP/IP</span></span>
-        <span class="skill-item"><img src="medias/icons/ros2.png" alt=""><span>ROS 2</span></span>
+    <!-- ============================================
+        HERO
+        ============================================ -->
+    <header class="hero" id="hero">
+      <div class="hero-split">
+
+        <!-- Colonne gauche : profil -->
+        <div class="hero-inner">
+          <span class="status-tag"><span class="dot"></span>en alternance à GMP — dès septembre 2026</span>
+
+          <h1 class="hero-name">Nickson FOTSA</h1>
+          <p class="hero-title">Élève-ingénieur ASTRE — systèmes embarqués & IoT</p>
+
+          <p class="hero-about">
+            Curieux par nature, j’aime explorer, chercher et comprendre ce qui se trouve derrière les systèmes que j’utilise.
+            Aujourd’hui en alternance dans le domaine de l’embarqué, je m’intéresse autant au firmware et aux communications qu’à l’IoT, au cloud et aux interfaces. Mon objectif : continuer à découvrir, expérimenter et construire.
+          </p>
+
+          <a href="nickson_fotsa.pdf" download class="btn">télécharger mon CV ↓</a>
+        </div>
+
+        <!-- Colonne droite : vidéo encadrée -->
+        <div class="hero-media">
+          <video class="hero-video" autoplay muted loop playsinline webkit-playsinline>
+            <source src="medias/hero.mp4" type="video/mp4">
+          </video>
+        </div>
+
       </div>
-    </div>
 
-    <div class="skill-layer">
-      <span class="skill-layer-title">logiciel / traitement</span>
-      <div class="skill-grid">
-        <span class="skill-item"><img src="medias/icons/python.png" alt=""><span>Python</span></span>
-        <span class="skill-item"><img src="medias/icons/java.png" alt=""><span>Java</span></span>
-        <span class="skill-item"><img src="medias/icons/csharp.svg" alt=""><span>C#</span></span>
-        <span class="skill-item"><img src="medias/icons/php.png" alt=""><span>PHP</span></span>
-        <span class="skill-item"><img src="medias/icons/js.png" alt=""><span>JavaScript</span></span>
-        <span class="skill-item"><img src="medias/icons/sql.png" alt=""><span>SQL</span></span>
+      <div class="scroll-hint" aria-hidden="true"><span>scroll</span><div class="line"></div></div>
+    </header>
+
+    <!-- ============================================
+        PARCOURS — formations en tuiles (ordre chronologique)
+        ============================================ -->
+    <section id="parcours">
+      <div class="container">
+        <span class="eyebrow">01</span>
+        <h2 class="section-title">Parcours</h2>
+
+        <div class="grid-cards" id="formationsGrid">
+
+          <!-- Formation 3 — ENSIM -->
+          <article class="tile" tabindex="0" role="button" aria-expanded="false">
+            <div class="tile-thumb logo-center">
+              <img class="logo" src="medias/etablissements/ensim.png" alt="ENSIM" onerror="this.style.display='none';">
+              <div class="thumb-caption">
+                <span class="cat">2025 — présent</span>
+                <span class="title">Ingénieur ASTRE</span>
+              </div>
+            </div>
+            <div class="tile-detail">
+              <button class="tile-back" type="button">← réduire</button>
+              <div class="tile-detail-inner">
+                <span class="tile-meta">ENSIM — Architecture des Systèmes Temps Réel et Embarqués</span>
+                <ul class="tile-list">
+                  <li>Linux embarqué — driver development — développement web</li>
+                  <li>Développement algorithmique — conception d'IHM</li>
+                  <li>Communication réseau & protocoles IP — gestion de projets</li>
+                </ul>
+                <p class="tile-objective">Cette formation m'permet d'approfondir la conception de systèmes temps réel embarqués, du driver bas niveau jusqu'à l'interface web, avec une vision système complète — réseau, IHM, gestion de projet.</p>
+                <div class="tile-footer">
+                  <a href="https://ensim.univ-lemans.fr/fr/index.html" target="_blank" rel="noopener" class="text-link">site de l'établissement</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Formation 2 — IUT Bandjoun -->
+          <article class="tile" tabindex="0" role="button" aria-expanded="false">
+            <div class="tile-thumb logo-center">
+              <img class="logo" src="medias/etablissements/iut.png" alt="IUT Bandjoun" onerror="this.style.display='none';">
+              <div class="thumb-caption">
+                <span class="cat">2023 — 2025</span>
+                <span class="title">DUT Génie Électrique & Informatique Industrielle</span>
+              </div>
+            </div>
+            <div class="tile-detail">
+              <button class="tile-back" type="button">← réduire</button>
+              <div class="tile-detail-inner">
+                <span class="tile-meta">IUT Bandjoun</span>
+                <ul class="tile-list">
+                  <li>Automates (TIA Portal, Siemens, Zelio) — électronique de puissance — machines électriques</li>
+                  <li>Langages C/C++ — microcontrôleurs (AVR, PIC) — bases de données SQL — supervision SCADA</li>
+                </ul>
+                <p class="tile-objective">Cette formation a posé mes bases concrètes en automatisme industriel et en électrotechnique — lecture de schémas, programmation d'automates, premiers langages bas niveau — avant d'aller plus loin dans l'embarqué.</p>
+                <div class="tile-footer">
+                  <a href="https://www.univ-dschang.org/iutfv/" target="_blank" rel="noopener" class="text-link">site de l'établissement</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Formation 1 — Yaoundé I -->
+          <article class="tile" tabindex="0" role="button" aria-expanded="false">
+            <div class="tile-thumb logo-center">
+              <img class="logo" src="medias/etablissements/uy1.png" alt="Université de Yaoundé I" onerror="this.style.display='none';">
+              <div class="thumb-caption">
+                <span class="cat">2022 — 2023</span>
+                <span class="title">L1 Physique — Sciences Fondamentales</span>
+              </div>
+            </div>
+            <div class="tile-detail">
+              <button class="tile-back" type="button">← réduire</button>
+              <div class="tile-detail-inner">
+                <span class="tile-meta">Université de Yaoundé I</span>
+                <ul class="tile-list">
+                  <li>Mécanique du point, électromagnétisme, optique géométrique, thermodynamique</li>
+                  <li>Analyse réelle, algèbre linéaire, probabilités & statistiques, calcul numérique</li>
+                </ul>
+                <p class="tile-objective">Cette année de physique fondamentale a construit ma rigueur scientifique et mathématique — le socle indispensable avant d'aborder l'ingénierie appliquée.</p>
+                <div class="tile-footer">
+                  <a href="https://uy1.uninet.cm/" target="_blank" rel="noopener" class="text-link">site de l'établissement</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="skill-layer">
-      <span class="skill-layer-title">interface / restitution</span>
-      <div class="skill-grid">
-        <span class="skill-item"><img src="medias/icons/html.png" alt=""><span>HTML</span></span>
-        <span class="skill-item"><img src="medias/icons/css.png" alt=""><span>CSS</span></span>
-        <span class="skill-item"><img src="medias/icons/js.png" alt=""><span>JS</span></span>
-        <span class="skill-item"><img src="medias/icons/wpf.png" alt=""><span>WPF (.NET)</span></span>
+
+    <!-- ============================================
+        CERTIFICATIONS
+        ============================================ -->
+    <section id="certifications">
+      <div class="container">
+        <span class="eyebrow">02</span>
+        <h2 class="section-title">Certifications</h2>
+
+        <div class="grid-cards" id="certificationsGrid">
+
+
+          <!-- freeCodeCamp — Foundational C# with Microsoft -->
+          <article class="tile" tabindex="0" role="button" aria-expanded="false">
+            <div class="tile-thumb logo-center">
+              <img class="logo" src="medias/certifications/freecodecamp.png" alt="freeCodeCamp" onerror="this.style.display='none';">
+              <div class="thumb-caption">
+                <span class="cat">19 Octobre 2026</span>
+                <span class="title">Foundational C# with Microsoft</span>
+              </div>
+            </div>
+            <div class="tile-detail">
+              <button class="tile-back" type="button">← réduire</button>
+              <div class="tile-detail-inner">
+                <span class="tile-meta">freeCodeCamp × Microsoft Learn</span>
+                <ul class="tile-list">
+                  <li>Parcours de 35 h sur Microsoft Learn validé par un examen de 80 questions</li>
+                  <li>Variables, types de données, structures de contrôle et syntaxe C#</li>
+                  <li>Bases pour le développement d'applications .NET (utilisées ensuite en WPF)</li>
+                </ul>
+                <div class="tile-footer">
+                  <a href="https://www.freecodecamp.org/certification/nicks0n/foundational-c-sharp-with-microsoft" target="_blank" rel="noopener" class="text-link">vérifier le certificat</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+
+          <!-- INRS — Prévention Sup' -->
+          <article class="tile" tabindex="0" role="button" aria-expanded="false">
+            <div class="tile-thumb logo-center">
+              <img class="logo" src="medias/certifications/inrs.png" alt="INRS" onerror="this.style.display='none';">
+              <div class="thumb-caption">
+                <span class="cat">12 décembre 2025</span>
+                <span class="title">Prévention Sup' — santé et sécurité au travail</span>
+              </div>
+            </div>
+            <div class="tile-detail">
+              <button class="tile-back" type="button">← réduire</button>
+              <div class="tile-detail-inner">
+                <span class="tile-meta">INRS — Institut National de Recherche et de Sécurité</span>
+                <ul class="tile-list">
+                  <li>Parcours d'autoformation en ligne sous forme de serious game</li>
+                  <li>Prévention des risques professionnels et santé-sécurité au travail</li>
+                </ul>
+                <div class="tile-footer">
+                  <a href="medias/certifications/Attestation_de_reusssite_Prevention_Sup.pdf" target="_blank" rel="noopener" class="text-link">voir l'attestation</a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="skill-layer">
-      <span class="skill-layer-title">conception / outils</span>
-      <div class="skill-grid">
-        <span class="skill-item"><img src="medias/icons/git.png" alt=""><span>Git</span></span>
-        <span class="skill-item"><img src="medias/icons/figma.png" alt=""><span>Figma</span></span>
-        <span class="skill-item"><img src="medias/icons/solidworks.png" alt=""><span>SolidWorks</span></span>
-        <span class="skill-item"><img src="medias/icons/lab.png" alt=""><span>LabVIEW</span></span>
-        <span class="skill-item"><img src="medias/icons/kicad.png" alt=""><span>KiCad</span></span>
+
+    <!-- ============================================
+        COMPETENCES — icônes nues par couche
+        ============================================ -->
+    <section id="competences">
+      <div class="container">
+        <span class="eyebrow">03</span>
+        <h2 class="section-title">Compétences</h2>
+
+        <div class="skill-layer">
+          <span class="skill-layer-title">matériel / bas niveau</span>
+          <div class="skill-grid">
+            <span class="skill-item"><img src="medias/icons/cplusplus.png" alt=""><span>C++</span></span>
+            <span class="skill-item"><img src="medias/icons/c.svg" alt=""><span>C</span></span>
+            <span class="skill-item"><img src="medias/icons/stm32.svg" alt=""><span>STM32</span></span>
+            <span class="skill-item"><img src="medias/icons/esp32.png" alt=""><span>ESP32</span></span>
+            <span class="skill-item"><img src="medias/icons/arduino.png" alt=""><span>Arduino</span></span>
+            <span class="skill-item"><img src="medias/icons/asm.png" alt=""><span>Assembleur</span></span>
+            <span class="skill-item"><img src="medias/icons/rs485.png" alt=""><span>RS485/CAN</span></span>
+            <span class="skill-item"><img src="medias/icons/linux.png" alt=""><span>Linux</span></span>
+          </div>
+        </div>
+
+        <div class="skill-layer">
+          <span class="skill-layer-title">réseau / communication</span>
+          <div class="skill-grid">
+            <span class="skill-item"><img src="medias/icons/mqtt.png" alt=""><span>MQTT</span></span>
+            <span class="skill-item"><img src="medias/icons/tcp.png" alt=""><span>TCP/IP</span></span>
+            <span class="skill-item"><img src="medias/icons/ros2.png" alt=""><span>ROS 2</span></span>
+          </div>
+        </div>
+
+        <div class="skill-layer">
+          <span class="skill-layer-title">logiciel / traitement</span>
+          <div class="skill-grid">
+            <span class="skill-item"><img src="medias/icons/python.png" alt=""><span>Python</span></span>
+            <span class="skill-item"><img src="medias/icons/java.png" alt=""><span>Java</span></span>
+            <span class="skill-item"><img src="medias/icons/csharp.svg" alt=""><span>C#</span></span>
+            <span class="skill-item"><img src="medias/icons/php.png" alt=""><span>PHP</span></span>
+            <span class="skill-item"><img src="medias/icons/js.png" alt=""><span>JavaScript</span></span>
+            <span class="skill-item"><img src="medias/icons/sql.png" alt=""><span>SQL</span></span>
+          </div>
+        </div>
+
+        <div class="skill-layer">
+          <span class="skill-layer-title">interface / restitution</span>
+          <div class="skill-grid">
+            <span class="skill-item"><img src="medias/icons/html.png" alt=""><span>HTML</span></span>
+            <span class="skill-item"><img src="medias/icons/css.png" alt=""><span>CSS</span></span>
+            <span class="skill-item"><img src="medias/icons/js.png" alt=""><span>JS</span></span>
+            <span class="skill-item"><img src="medias/icons/wpf.png" alt=""><span>WPF (.NET)</span></span>
+          </div>
+        </div>
+
+        <div class="skill-layer">
+          <span class="skill-layer-title">conception / outils</span>
+          <div class="skill-grid">
+            <span class="skill-item"><img src="medias/icons/git.png" alt=""><span>Git</span></span>
+            <span class="skill-item"><img src="medias/icons/figma.png" alt=""><span>Figma</span></span>
+            <span class="skill-item"><img src="medias/icons/solidworks.png" alt=""><span>SolidWorks</span></span>
+            <span class="skill-item"><img src="medias/icons/lab.png" alt=""><span>LabVIEW</span></span>
+            <span class="skill-item"><img src="medias/icons/kicad.png" alt=""><span>KiCad</span></span>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- ============================================
-     PROJETS — 2 catégories, tuiles image en fond
-     ============================================ -->
-<section id="projets">
-  <div class="container">
-    <span class="eyebrow">03</span>
-    <h2 class="section-title">Projets</h2>
+    <!-- ============================================
+        PROJETS — 2 catégories, tuiles image en fond
+        ============================================ -->
+    <section id="projets">
+      <div class="container">
+        <span class="eyebrow">04</span>
+        <h2 class="section-title">Projets</h2>
 
-    <p class="tile-meta" style="margin-bottom:10px;">🛡️ Systèmes embarqués & informatique industrielle</p>
-    <div class="grid-cards" id="projectsGridEmbarque" style="margin-bottom:24px;">
+        <p class="tile-meta" style="margin-bottom:10px;">🛡️ Systèmes embarqués & informatique industrielle</p>
+        <div class="grid-cards" id="projectsGridEmbarque" style="margin-bottom:24px;">
 
-      <!-- Application météo de stpckage -->
-      <article class="tile" tabindex="0" role="button" aria-expanded="false">
-        <div class="tile-thumb">
-          <img class="bg" src="medias/projects/iot-mqtt.png" alt="" onerror="this.style.display='none';">
-          <div class="thumb-fade"></div>
-          <div class="thumb-caption">
-            <span class="cat">projet personnel</span>
-            <span class="title">Chaîne IoT capteurs → MQTT</span>
-          </div>
-        </div>
-        <div class="tile-detail">
-          <button class="tile-back" type="button">← réduire</button>
-          <div class="tile-detail-inner">
-            <p class="tile-objective"><strong>Objectif —</strong> Mettre en place une chaîne de transmission complète de données climatiques, depuis l'acquisition capteur jusqu'à la diffusion via un broker MQTT, avec sauvegarde locale en parallèle.</p>
-            <ul class="tile-list">
-              <li>Acquisition température/humidité/pression (BME280) et luminosité (BH1750) via ESP32</li>
-              <li>Transmission par sockets vers Python, avec sauvegarde locale simultanée (.txt)</li>
-              <li>Publication MQTT (Mosquitto) et réception côté abonné (publisher/subscriber)</li>
-            </ul>
-            <div class="tile-footer">
-              <div class="icon-actions">
-                <a href="https://github.com/fotsanickson/chaine_iot_capteurs.git" target="_blank" rel="noopener" title="Repository GitHub"><img src="medias/icons/git.png" alt="GitHub"></a>
-              </div>
-              <div class="tile-tech">
-                <img src="medias/icons/esp32.png" alt="ESP32" title="ESP32">
-                <img src="medias/icons/python.png" alt="Python" title="Python">
-                <img src="medias/icons/mqtt.png" alt="MQTT" title="MQTT">
-                <img src="medias/icons/json.png" alt="JSON" title="JSON">
+          <!-- Application météo de stpckage -->
+          <article class="tile" tabindex="0" role="button" aria-expanded="false">
+            <div class="tile-thumb">
+              <img class="bg" src="medias/projects/iot-mqtt.png" alt="" onerror="this.style.display='none';">
+              <div class="thumb-fade"></div>
+              <div class="thumb-caption">
+                <span class="cat">projet personnel</span>
+                <span class="title">Chaîne IoT capteurs → MQTT</span>
               </div>
             </div>
-          </div>
-        </div>
-      </article>
-
-      <article class="tile" tabindex="0" role="button" aria-expanded="false">
-        <div class="tile-thumb">
-          <img class="bg" src="medias/projects/controle-acces.png" alt="" onerror="this.style.display='none';">
-          <div class="thumb-fade"></div>
-          <div class="thumb-caption">
-            <span class="cat">projet personnel</span>
-            <span class="title">Contrôle d'accès automatisé — IR & supervision WPF</span>
-          </div>
-        </div>
-        <div class="tile-detail">
-          <button class="tile-back" type="button">← réduire</button>
-          <div class="tile-detail-inner">
-            <p class="tile-objective"><strong>Objectif —</strong> Concevoir un système de contrôle d'accès automatisé combinant détection de présence, authentification par télécommande infrarouge et supervision distante via une interface graphique dédiée.</p>
-            <ul class="tile-list">
-              <li>Détection de présence IR + affichage local du code d'accès sur LCD</li>
-              <li>Authentification par télécommande/récepteur IR, ouverture simulée par servomoteur</li>
-              <li>Retour visuel/sonore (LED + buzzer) selon l'état du système</li>
-              <li>Transmission UART (JSON) vers une IHM C#/WPF affichant tous les paramètres du système en temps réel</li>
-            </ul>
-            <div class="tile-footer">
-              <div class="icon-actions">
-                <a href="https://github.com/fotsanickson/secure_home.git" target="_blank" rel="noopener" title="Repository GitHub"><img src="medias/icons/git.png" alt="GitHub"></a>
-                <a href="medias/projects/controle-acces.mp4" target="_blank" rel="noopener" title="Voir la vidéo"><img src="medias/icons/play.png" alt="Vidéo"></a>
-              </div>
-              <div class="tile-tech">
-                <img src="medias/icons/arduino.png" alt="Arduino" title="Arduino">
-                <img src="medias/icons/json.png" alt="JSON" title="JSON">
-                <img src="medias/icons/csharp.svg" alt="C#" title="C#">
-                <img src="medias/icons/wpf.png" alt="WPF" title="WPF">
+            <div class="tile-detail">
+              <button class="tile-back" type="button">← réduire</button>
+              <div class="tile-detail-inner">
+                <p class="tile-objective"><strong>Objectif —</strong> Mettre en place une chaîne de transmission complète de données climatiques, depuis l'acquisition capteur jusqu'à la diffusion via un broker MQTT, avec sauvegarde locale en parallèle.</p>
+                <ul class="tile-list">
+                  <li>Acquisition température/humidité/pression (BME280) et luminosité (BH1750) via ESP32</li>
+                  <li>Transmission par sockets vers Python, avec sauvegarde locale simultanée (.txt)</li>
+                  <li>Publication MQTT (Mosquitto) et réception côté abonné (publisher/subscriber)</li>
+                </ul>
+                <div class="tile-footer">
+                  <div class="icon-actions">
+                    <a href="https://github.com/fotsanickson/chaine_iot_capteurs.git" target="_blank" rel="noopener" title="Repository GitHub"><img src="medias/icons/git.png" alt="GitHub"></a>
+                  </div>
+                  <div class="tile-tech">
+                    <img src="medias/icons/esp32.png" alt="ESP32" title="ESP32">
+                    <img src="medias/icons/python.png" alt="Python" title="Python">
+                    <img src="medias/icons/mqtt.png" alt="MQTT" title="MQTT">
+                    <img src="medias/icons/json.png" alt="JSON" title="JSON">
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </article>
+          </article>
 
-      <!-- Dupliquer ce bloc pour ajouter d'autres projets embarqués -->
-
-    </div>
-
-    <p class="tile-meta" style="margin-bottom:10px;">💻 Logiciels & algorithmique</p>
-    <div class="grid-cards" id="projectsGridLogiciel">
-
-      <!-- Sport sans barrieres -->
-      <article class="tile" tabindex="0" role="button" aria-expanded="false">
-        <div class="tile-thumb">
-          <img class="bg" src="medias/projects/spsbarr.png" alt="" onerror="this.style.display='none';">
-          <div class="thumb-fade"></div>
-          <div class="thumb-caption">
-            <span class="cat">projet associatif</span>
-            <span class="title">Sport Sans Barrières</span>
-          </div>
-        </div>
-        <div class="tile-detail">
-          <button class="tile-back" type="button">← réduire</button>
-          <div class="tile-detail-inner">
-            <p class="tile-objective"><strong>Objectif —</strong> Concevoir un site vitrine pour une organisation dédiée à l'inclusion sportive des personnes en situation de handicap, présentant ses activités, ses objectifs accomplis et ses partenariats.</p>
-            <ul class="tile-list">
-              <li>Présentation des activités, réalisations et partenaires de l'organisation</li>
-              <li>Formulaire de contact et possibilité de rejoindre l'initiative</li>
-              <li>Site statique responsive, sans backend</li>
-            </ul>
-            <div class="tile-footer">
-              <div class="icon-actions">
-                <a href="https://github.com/fotsanickson/sport_sans_barriere.git" target="_blank" rel="noopener" title="Repository GitHub"><img src="medias/icons/git.png" alt="GitHub"></a>
-                <a href="https://sportsansbarriere.page.gd/" target="_blank" rel="noopener" title="Voir le site en ligne"><img src="medias/icons/launch.png" alt="Voir le site"></a>
-              </div>
-              <div class="tile-tech">
-                <img src="medias/icons/html.png" alt="HTML" title="HTML">
-                <img src="medias/icons/css.png" alt="css" title="css">
-                <img src="medias/icons/js.png" alt="JavaScript" title="JavaScript">
+          <article class="tile" tabindex="0" role="button" aria-expanded="false">
+            <div class="tile-thumb">
+              <img class="bg" src="medias/projects/controle-acces.png" alt="" onerror="this.style.display='none';">
+              <div class="thumb-fade"></div>
+              <div class="thumb-caption">
+                <span class="cat">projet personnel</span>
+                <span class="title">Contrôle d'accès automatisé — IR & supervision WPF</span>
               </div>
             </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- Bataille navale -->
-
-       <article class="tile" tabindex="0" role="button" aria-expanded="false">
-        <div class="tile-thumb">
-          <img class="bg" src="medias/projects/batailles.png" alt="" onerror="this.style.display='none';">
-          <div class="thumb-fade"></div>
-          <div class="thumb-caption">
-            <span class="cat">projet académique</span>
-            <span class="title">Bataille Navale — jeu en C</span>
-          </div>
-        </div>
-        <div class="tile-detail">
-          <button class="tile-back" type="button">← réduire</button>
-          <div class="tile-detail-inner">
-            <p class="tile-objective"><strong>Objectif —</strong> Concevoir la logique complète d'un jeu de bataille navale en C, jouable en mode humain contre humain, avec gestion dynamique d'une matrice de jeu et un système d'armement varié (torpilles, lance-roquettes).</p>
-            <ul class="tile-list">
-              <li>Moteur logique complet (placement, détection des coups, victoire)</li>
-              <li>Gestion de matrice dynamique pour le plateau de jeu</li>
-              <li>Affichage différencié selon navire touché et type d'arme utilisé</li>
-            </ul>
-            <div class="tile-footer">
-              <div class="icon-actions">
-                <a href="https://github.com/fotsanickson/Bataille-navale.git" target="_blank" rel="noopener" title="Repository GitHub"><img src="medias/icons/git.png" alt="GitHub"></a>
-              </div>
-              <div class="tile-tech">
-                <img src="medias/icons/c.svg" alt="C" title="C">
+            <div class="tile-detail">
+              <button class="tile-back" type="button">← réduire</button>
+              <div class="tile-detail-inner">
+                <p class="tile-objective"><strong>Objectif —</strong> Concevoir un système de contrôle d'accès automatisé combinant détection de présence, authentification par télécommande infrarouge et supervision distante via une interface graphique dédiée.</p>
+                <ul class="tile-list">
+                  <li>Détection de présence IR + affichage local du code d'accès sur LCD</li>
+                  <li>Authentification par télécommande/récepteur IR, ouverture simulée par servomoteur</li>
+                  <li>Retour visuel/sonore (LED + buzzer) selon l'état du système</li>
+                  <li>Transmission UART (JSON) vers une IHM C#/WPF affichant tous les paramètres du système en temps réel</li>
+                </ul>
+                <div class="tile-footer">
+                  <div class="icon-actions">
+                    <a href="https://github.com/fotsanickson/secure_home.git" target="_blank" rel="noopener" title="Repository GitHub"><img src="medias/icons/git.png" alt="GitHub"></a>
+                    <a href="medias/projects/controle-acces.mp4" target="_blank" rel="noopener" title="Voir la vidéo"><img src="medias/icons/play.png" alt="Vidéo"></a>
+                  </div>
+                  <div class="tile-tech">
+                    <img src="medias/icons/arduino.png" alt="Arduino" title="Arduino">
+                    <img src="medias/icons/json.png" alt="JSON" title="JSON">
+                    <img src="medias/icons/csharp.svg" alt="C#" title="C#">
+                    <img src="medias/icons/wpf.png" alt="WPF" title="WPF">
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </article>
+          </article>
 
-      <!-- CFONB -->
+          <!-- Dupliquer ce bloc pour ajouter d'autres projets embarqués -->
 
-      <article class="tile" tabindex="0" role="button" aria-expanded="false">
-        <div class="tile-thumb">
-          <img class="bg" src="medias/projects/cfonb.png" alt="" onerror="this.style.display='none';">
-          <div class="thumb-fade"></div>
-          <div class="thumb-caption">
-            <span class="cat">projet académique</span>
-            <span class="title">Analyseur de fichiers bancaires CFONB</span>
-          </div>
         </div>
-        <div class="tile-detail">
-          <button class="tile-back" type="button">← réduire</button>
-          <div class="tile-detail-inner">
-            <p class="tile-objective"><strong>Objectif —</strong> Extraire automatiquement l'ensemble des informations métier contenues dans des fichiers bancaires au format CFONB (crédits, débits, dates, numéros d'opération et de transaction, virements, ouverture/fermeture de compte), via une logique de parsing rigoureuse.</p>
-            <ul class="tile-list">
-              <li>Parsing, validation et affichage des enregistrements CFONB</li>
-              <li>Modification/édition des données extraites</li>
-              <li>Couverture exhaustive des types d'opérations bancaires</li>
-            </ul>
-            <div class="tile-footer">
-              <div class="icon-actions">
-                <a href="https://github.com/fotsanickson/CFONB_Analyser.git" target="_blank" rel="noopener" title="Repository GitHub"><img src="medias/icons/git.png" alt="GitHub"></a>
-              </div>
-              <div class="tile-tech">
-                <img src="medias/icons/c.svg" alt="C" title="C">
+
+        <p class="tile-meta" style="margin-bottom:10px;">💻 Logiciels & algorithmique</p>
+        <div class="grid-cards" id="projectsGridLogiciel">
+
+          <!-- Sport sans barrieres -->
+          <article class="tile" tabindex="0" role="button" aria-expanded="false">
+            <div class="tile-thumb">
+              <img class="bg" src="medias/projects/spsbarr.png" alt="" onerror="this.style.display='none';">
+              <div class="thumb-fade"></div>
+              <div class="thumb-caption">
+                <span class="cat">projet associatif</span>
+                <span class="title">Sport Sans Barrières</span>
               </div>
             </div>
-          </div>
-        </div>
-      </article>
-
-       <!-- Bibliothèque -->
-
-      <article class="tile" tabindex="0" role="button" aria-expanded="false">
-        <div class="tile-thumb">
-          <img class="bg" src="medias/projects/bibliotheque.png" alt="" onerror="this.style.display='none';">
-          <div class="thumb-fade"></div>
-          <div class="thumb-caption">
-            <span class="cat">projet académique</span>
-            <span class="title">Site web de gestion de bibliothèque</span>
-          </div>
-        </div>
-        <div class="tile-detail">
-          <button class="tile-back" type="button">← réduire</button>
-          <div class="tile-detail-inner">
-            <p class="tile-objective"><strong>Objectif —</strong> Développer une plateforme web permettant aux étudiants d'emprunter des livres ou de réserver des espaces de lecture communs, avec gestion complète du compte utilisateur.</p>
-            <ul class="tile-list">
-              <li>Inscription, désinscription et suppression de compte</li>
-              <li>Emprunt/restitution de livres et réservation d'espaces communs</li>
-              <li>Pages dynamiques (JS) avec backend PHP/MySQLi</li>
-            </ul>
-            <div class="tile-footer">
-              <div class="icon-actions">
-                <a href="https://github.com/fotsanickson/ProjetHTML/tree/user" target="_blank" rel="noopener" title="Repository GitHub"><img src="medias/icons/git.png" alt="GitHub"></a>
-                <a href="medias/projects/bibliotheque.mp4" target="_blank" rel="noopener" title="Voir la vidéo"><img src="medias/icons/play.png" alt="Vidéo"></a>
-              </div>
-              <div class="tile-tech">
-                <img src="medias/icons/php.png" alt="PHP" title="PHP">
-                <img src="medias/icons/sql.png" alt="SQL" title="SQL">
-                <img src="medias/icons/html.png" alt="HTML" title="HTML">
-                <img src="medias/icons/css.png" alt="css" title="css">
-                <img src="medias/icons/js.png" alt="JavaScript" title="JavaScript">
+            <div class="tile-detail">
+              <button class="tile-back" type="button">← réduire</button>
+              <div class="tile-detail-inner">
+                <p class="tile-objective"><strong>Objectif —</strong> Concevoir un site vitrine pour une organisation dédiée à l'inclusion sportive des personnes en situation de handicap, présentant ses activités, ses objectifs accomplis et ses partenariats.</p>
+                <ul class="tile-list">
+                  <li>Présentation des activités, réalisations et partenaires de l'organisation</li>
+                  <li>Formulaire de contact et possibilité de rejoindre l'initiative</li>
+                  <li>Site statique responsive, sans backend</li>
+                </ul>
+                <div class="tile-footer">
+                  <div class="icon-actions">
+                    <a href="https://github.com/fotsanickson/sport_sans_barriere.git" target="_blank" rel="noopener" title="Repository GitHub"><img src="medias/icons/git.png" alt="GitHub"></a>
+                    <a href="https://sportsansbarriere.page.gd/" target="_blank" rel="noopener" title="Voir le site en ligne"><img src="medias/icons/launch.png" alt="Voir le site"></a>
+                  </div>
+                  <div class="tile-tech">
+                    <img src="medias/icons/html.png" alt="HTML" title="HTML">
+                    <img src="medias/icons/css.png" alt="css" title="css">
+                    <img src="medias/icons/js.png" alt="JavaScript" title="JavaScript">
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </article>
+          </article>
 
-      <!-- Système de facturation -->
+          <!-- Bataille navale -->
 
-      <article class="tile" tabindex="0" role="button" aria-expanded="false">
-        <div class="tile-thumb">
-          <img class="bg" src="medias/projects/facturation.png" alt="" onerror="this.style.display='none';">
-          <div class="thumb-fade"></div>
-          <div class="thumb-caption">
-            <span class="cat">projet personnel</span>
-            <span class="title">Système de facturation en C</span>
-          </div>
-        </div>
-        <div class="tile-detail">
-          <button class="tile-back" type="button">← réduire</button>
-          <div class="tile-detail-inner">
-            <p class="tile-objective"><strong>Objectif —</strong> Simuler un système de gestion commerciale complet (clients, produits, devis, factures) en C, avec persistance des données via CSV et calcul automatique des montants.</p>
-            <ul class="tile-list">
-              <li>Architecture modulaire (client, produit, facture, utilitaire, main)</li>
-              <li>Devis/factures avec numérotation auto, calcul TVA et suivi de statut</li>
-              <li>Mise à jour automatique des stocks, persistance via fichiers CSV</li>
-            </ul>
-            <div class="tile-footer">
-              <div class="icon-actions">
-                <a href="https://github.com/fotsanickson/SystemeFacturation.git" target="_blank" rel="noopener" title="Repository GitHub"><img src="medias/icons/git.png" alt="GitHub"></a>
-              </div>
-              <div class="tile-tech">
-                <img src="medias/icons/c.svg" alt="C" title="C">
+          <article class="tile" tabindex="0" role="button" aria-expanded="false">
+            <div class="tile-thumb">
+              <img class="bg" src="medias/projects/batailles.png" alt="" onerror="this.style.display='none';">
+              <div class="thumb-fade"></div>
+              <div class="thumb-caption">
+                <span class="cat">projet académique</span>
+                <span class="title">Bataille Navale — jeu en C</span>
               </div>
             </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- Shifumi -->
-
-      <article class="tile" tabindex="0" role="button" aria-expanded="false">
-        <div class="tile-thumb">
-          <img class="bg" src="medias/projects/shifumi.png" alt="" onerror="this.style.display='none';">
-          <div class="thumb-fade"></div>
-          <div class="thumb-caption">
-            <span class="cat">projet académique</span>
-            <span class="title">Shifumi C/S — jeu en réseau</span>
-          </div>
-        </div>
-        <div class="tile-detail">
-          <button class="tile-back" type="button">← réduire</button>
-          <div class="tile-detail-inner">
-            <p class="tile-objective"><strong>Objectif —</strong> Développer un jeu Shifumi en architecture client-serveur, avec communication via sockets TCP et gestion de processus pour supporter plusieurs sessions de jeu simultanées.</p>
-            <ul class="tile-list">
-              <li>Communication réseau via sockets TCP (socket, bind, listen, accept, connect)</li>
-              <li>Gestion multi-clients par création de processus fils (fork)</li>
-              <li>Moteur de jeu avec choix aléatoire côté serveur et calcul du résultat</li>
-            </ul>
-            <div class="tile-footer">
-              <div class="icon-actions">
-                <a href="https://github.com/fotsanickson/Bataille-navale.git" target="_blank" rel="noopener" title="Repository GitHub"><img src="medias/icons/git.png" alt="GitHub"></a>
-              </div>
-              <div class="tile-tech">
-                <img src="medias/icons/c.svg" alt="C" title="C">
-                <img src="medias/icons/linux.png" alt="Linux" title="Linux">
+            <div class="tile-detail">
+              <button class="tile-back" type="button">← réduire</button>
+              <div class="tile-detail-inner">
+                <p class="tile-objective"><strong>Objectif —</strong> Concevoir la logique complète d'un jeu de bataille navale en C, jouable en mode humain contre humain, avec gestion dynamique d'une matrice de jeu et un système d'armement varié (torpilles, lance-roquettes).</p>
+                <ul class="tile-list">
+                  <li>Moteur logique complet (placement, détection des coups, victoire)</li>
+                  <li>Gestion de matrice dynamique pour le plateau de jeu</li>
+                  <li>Affichage différencié selon navire touché et type d'arme utilisé</li>
+                </ul>
+                <div class="tile-footer">
+                  <div class="icon-actions">
+                    <a href="https://github.com/fotsanickson/Bataille-navale.git" target="_blank" rel="noopener" title="Repository GitHub"><img src="medias/icons/git.png" alt="GitHub"></a>
+                  </div>
+                  <div class="tile-tech">
+                    <img src="medias/icons/c.svg" alt="C" title="C">
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </article>
+          </article>
 
-      <!-- Dupliquer ce bloc pour ajouter d'autres projets logiciels -->
+          <!-- CFONB -->
 
-    </div>
-  </div>
-</section>
-
-<!-- ============================================
-     EXPERIENCES — même tuile, sans logos compétences
-     ============================================ -->
-<section id="experiences">
-  <div class="container">
-    <span class="eyebrow">04</span>
-    <h2 class="section-title">Expériences</h2>
-
-    <div class="grid-cards" id="experiencesGrid">
-
-      <!-- KFC -->
-      <article class="tile" tabindex="0" role="button" aria-expanded="false">
-        <div class="tile-thumb logo-center">
-          <img class="logo" src="medias/entreprises/kfc.svg" alt="KFC" onerror="this.style.display='none';">
-          <div class="thumb-caption">
-            <span class="cat">10 Avril — présent</span>
-            <span class="title">Équipier polyvalent</span>
-          </div>
-        </div>
-        <div class="tile-detail">
-          <button class="tile-back" type="button">← réduire</button>
-          <div class="tile-detail-inner">
-            <span class="tile-meta">KFC — restauration rapide</span>
-            <ul class="tile-list">
-              <li>Accueil client et prise de commande (comptoir, caisse, drive)</li>
-              <li>Préparation et assemblage des produits dans le respect des normes d'hygiène (HACCP)</li>
-              <li>Gestion de la caisse et des transactions</li>
-              <li>Nettoyage et rangement du poste de travail</li>
-            </ul>
-            <div class="tile-footer">
-              <a href="https://www.kfc.fr/" target="_blank" rel="noopener" class="text-link">plateforme de l'entreprise</a>
+          <article class="tile" tabindex="0" role="button" aria-expanded="false">
+            <div class="tile-thumb">
+              <img class="bg" src="medias/projects/cfonb.png" alt="" onerror="this.style.display='none';">
+              <div class="thumb-fade"></div>
+              <div class="thumb-caption">
+                <span class="cat">projet académique</span>
+                <span class="title">Analyseur de fichiers bancaires CFONB</span>
+              </div>
             </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- CCO SA -->
-      <article class="tile" tabindex="0" role="button" aria-expanded="false">
-        <div class="tile-thumb logo-center">
-          <img class="logo" src="medias/entreprises/cco.png" alt="CCO SA" onerror="this.style.display='none';">
-          <div class="thumb-caption">
-            <span class="cat">Mai 2025</span>
-            <span class="title">Technicien stagiaire en automatisme</span>
-          </div>
-        </div>
-        <div class="tile-detail">
-          <button class="tile-back" type="button">← réduire</button>
-          <div class="tile-detail-inner">
-            <span class="tile-meta">CCO SA — immersion en unité de production industrielle</span>
-            <ul class="tile-list">
-              <li>Analyse fonctionnelle d'une chaîne de production automatisée de savon</li>
-              <li>Diagnostic et résolution de pannes (capteurs, actionneurs pneumatiques)</li>
-              <li>Rédaction d'un guide de maintenance préventive</li>
-            </ul>
-            <div class="tile-footer">
-              <a href="https://maligah.com/entreprises/details/complexe-cosmetique-de-louest?id=24241" target="_blank" rel="noopener" class="text-link">plateforme de l'entreprise</a>
+            <div class="tile-detail">
+              <button class="tile-back" type="button">← réduire</button>
+              <div class="tile-detail-inner">
+                <p class="tile-objective"><strong>Objectif —</strong> Extraire automatiquement l'ensemble des informations métier contenues dans des fichiers bancaires au format CFONB (crédits, débits, dates, numéros d'opération et de transaction, virements, ouverture/fermeture de compte), via une logique de parsing rigoureuse.</p>
+                <ul class="tile-list">
+                  <li>Parsing, validation et affichage des enregistrements CFONB</li>
+                  <li>Modification/édition des données extraites</li>
+                  <li>Couverture exhaustive des types d'opérations bancaires</li>
+                </ul>
+                <div class="tile-footer">
+                  <div class="icon-actions">
+                    <a href="https://github.com/fotsanickson/CFONB_Analyser.git" target="_blank" rel="noopener" title="Repository GitHub"><img src="medias/icons/git.png" alt="GitHub"></a>
+                  </div>
+                  <div class="tile-tech">
+                    <img src="medias/icons/c.svg" alt="C" title="C">
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </article>
+          </article>
 
-      <!-- GECS SARL -->
-      <article class="tile" tabindex="0" role="button" aria-expanded="false">
-        <div class="tile-thumb logo-center">
-          <img class="logo" src="medias/entreprises/gecs.png" alt="GECS SARL" onerror="this.style.display='none';">
-          <div class="thumb-caption">
-            <span class="cat">Été 2022 — 2024</span>
-            <span class="title">Assistant technicien en installations électriques</span>
-          </div>
-        </div>
-        <div class="tile-detail">
-          <button class="tile-back" type="button">← réduire</button>
-          <div class="tile-detail-inner">
-            <span class="tile-meta">GECS SARL — chantiers d'électrification résidentielle et industrielle</span>
-            <ul class="tile-list">
-              <li>Conception de plans d'implantation électrique (CAO)</li>
-              <li>Lecture de schémas de câblage complexes</li>
-              <li>Dimensionnement de parcs solaires et pose de panneaux photovoltaïques</li>
-            </ul>
-            <div class="tile-footer">
-              <a href="https://www.facebook.com/teulogegaetan/?locale=fa_IR" target="_blank" rel="noopener" class="text-link">plateforme de l'entreprise</a>
+          <!-- Bibliothèque -->
+
+          <article class="tile" tabindex="0" role="button" aria-expanded="false">
+            <div class="tile-thumb">
+              <img class="bg" src="medias/projects/bibliotheque.png" alt="" onerror="this.style.display='none';">
+              <div class="thumb-fade"></div>
+              <div class="thumb-caption">
+                <span class="cat">projet académique</span>
+                <span class="title">Site web de gestion de bibliothèque</span>
+              </div>
             </div>
-          </div>
+            <div class="tile-detail">
+              <button class="tile-back" type="button">← réduire</button>
+              <div class="tile-detail-inner">
+                <p class="tile-objective"><strong>Objectif —</strong> Développer une plateforme web permettant aux étudiants d'emprunter des livres ou de réserver des espaces de lecture communs, avec gestion complète du compte utilisateur.</p>
+                <ul class="tile-list">
+                  <li>Inscription, désinscription et suppression de compte</li>
+                  <li>Emprunt/restitution de livres et réservation d'espaces communs</li>
+                  <li>Pages dynamiques (JS) avec backend PHP/MySQLi</li>
+                </ul>
+                <div class="tile-footer">
+                  <div class="icon-actions">
+                    <a href="https://github.com/fotsanickson/ProjetHTML/tree/user" target="_blank" rel="noopener" title="Repository GitHub"><img src="medias/icons/git.png" alt="GitHub"></a>
+                    <a href="medias/projects/bibliotheque.mp4" target="_blank" rel="noopener" title="Voir la vidéo"><img src="medias/icons/play.png" alt="Vidéo"></a>
+                  </div>
+                  <div class="tile-tech">
+                    <img src="medias/icons/php.png" alt="PHP" title="PHP">
+                    <img src="medias/icons/sql.png" alt="SQL" title="SQL">
+                    <img src="medias/icons/html.png" alt="HTML" title="HTML">
+                    <img src="medias/icons/css.png" alt="css" title="css">
+                    <img src="medias/icons/js.png" alt="JavaScript" title="JavaScript">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Système de facturation -->
+
+          <article class="tile" tabindex="0" role="button" aria-expanded="false">
+            <div class="tile-thumb">
+              <img class="bg" src="medias/projects/facturation.png" alt="" onerror="this.style.display='none';">
+              <div class="thumb-fade"></div>
+              <div class="thumb-caption">
+                <span class="cat">projet personnel</span>
+                <span class="title">Système de facturation en C</span>
+              </div>
+            </div>
+            <div class="tile-detail">
+              <button class="tile-back" type="button">← réduire</button>
+              <div class="tile-detail-inner">
+                <p class="tile-objective"><strong>Objectif —</strong> Simuler un système de gestion commerciale complet (clients, produits, devis, factures) en C, avec persistance des données via CSV et calcul automatique des montants.</p>
+                <ul class="tile-list">
+                  <li>Architecture modulaire (client, produit, facture, utilitaire, main)</li>
+                  <li>Devis/factures avec numérotation auto, calcul TVA et suivi de statut</li>
+                  <li>Mise à jour automatique des stocks, persistance via fichiers CSV</li>
+                </ul>
+                <div class="tile-footer">
+                  <div class="icon-actions">
+                    <a href="https://github.com/fotsanickson/SystemeFacturation.git" target="_blank" rel="noopener" title="Repository GitHub"><img src="medias/icons/git.png" alt="GitHub"></a>
+                  </div>
+                  <div class="tile-tech">
+                    <img src="medias/icons/c.svg" alt="C" title="C">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Shifumi -->
+
+          <article class="tile" tabindex="0" role="button" aria-expanded="false">
+            <div class="tile-thumb">
+              <img class="bg" src="medias/projects/shifumi.png" alt="" onerror="this.style.display='none';">
+              <div class="thumb-fade"></div>
+              <div class="thumb-caption">
+                <span class="cat">projet académique</span>
+                <span class="title">Shifumi C/S — jeu en réseau</span>
+              </div>
+            </div>
+            <div class="tile-detail">
+              <button class="tile-back" type="button">← réduire</button>
+              <div class="tile-detail-inner">
+                <p class="tile-objective"><strong>Objectif —</strong> Développer un jeu Shifumi en architecture client-serveur, avec communication via sockets TCP et gestion de processus pour supporter plusieurs sessions de jeu simultanées.</p>
+                <ul class="tile-list">
+                  <li>Communication réseau via sockets TCP (socket, bind, listen, accept, connect)</li>
+                  <li>Gestion multi-clients par création de processus fils (fork)</li>
+                  <li>Moteur de jeu avec choix aléatoire côté serveur et calcul du résultat</li>
+                </ul>
+                <div class="tile-footer">
+                  <div class="icon-actions">
+                    <a href="https://github.com/fotsanickson/Bataille-navale.git" target="_blank" rel="noopener" title="Repository GitHub"><img src="medias/icons/git.png" alt="GitHub"></a>
+                  </div>
+                  <div class="tile-tech">
+                    <img src="medias/icons/c.svg" alt="C" title="C">
+                    <img src="medias/icons/linux.png" alt="Linux" title="Linux">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Dupliquer ce bloc pour ajouter d'autres projets logiciels -->
+
         </div>
-      </article>
+      </div>
+    </section>
 
-    </div>
-  </div>
-</section>
+    <!-- ============================================
+        EXPERIENCES — même tuile, sans logos compétences
+        ============================================ -->
+    <section id="experiences">
+      <div class="container">
+        <span class="eyebrow">05</span>
+        <h2 class="section-title">Expériences</h2>
 
-<!-- ============================================
-     CONTACT — icône au-dessus, texte en dessous
-     ============================================ -->
-<section id="contact" class="contact-section">
-  <div class="container">
-    <span class="eyebrow">05</span>
-    <h2>Contact</h2>
-    <div class="contact-row">
-      <!-- Complète ton adresse email ci-dessous -->
-      <a href="mailto:ton.email@exemple.com" class="contact-item">
-        <img src="medias/icons/mail.png" alt="">
-        <span>tfotsanickson@gmail.com</span>
-      </a>
-      <a href="tel:+33767544546" class="contact-item">
-        <img src="medias/icons/phone.png" alt="">
-        <span>+33 7 67 54 45 46</span>
-      </a>
-      <a href="https://www.linkedin.com/in/nickson-fotsa/" target="_blank" rel="noopener" class="contact-item">
-        <img src="medias/icons/linkedin.png" alt="">
-        <span>linkedin</span>
-      </a>
-      <a href="https://github.com/fotsanickson" target="_blank" rel="noopener" class="contact-item">
-        <img src="medias/icons/git.png" alt="">
-        <span>github</span>
-      </a>
-    </div>
-  </div>
-</section>
+        <div class="grid-cards" id="experiencesGrid">
 
-<script src="script.js"></script>
-<script src="main.js"></script>
-<script src="hero-animation.js"></script>
-</body>
+          <!-- KFC -->
+          <article class="tile" tabindex="0" role="button" aria-expanded="false">
+            <div class="tile-thumb logo-center">
+              <img class="logo" src="medias/entreprises/kfc.svg" alt="KFC" onerror="this.style.display='none';">
+              <div class="thumb-caption">
+                <span class="cat">10 Avril — présent</span>
+                <span class="title">Équipier polyvalent</span>
+              </div>
+            </div>
+            <div class="tile-detail">
+              <button class="tile-back" type="button">← réduire</button>
+              <div class="tile-detail-inner">
+                <span class="tile-meta">KFC — restauration rapide</span>
+                <ul class="tile-list">
+                  <li>Accueil client et prise de commande (comptoir, caisse, drive)</li>
+                  <li>Préparation et assemblage des produits dans le respect des normes d'hygiène (HACCP)</li>
+                  <li>Gestion de la caisse et des transactions</li>
+                  <li>Nettoyage et rangement du poste de travail</li>
+                </ul>
+                <div class="tile-footer">
+                  <a href="https://www.kfc.fr/" target="_blank" rel="noopener" class="text-link">plateforme de l'entreprise</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- CCO SA -->
+          <article class="tile" tabindex="0" role="button" aria-expanded="false">
+            <div class="tile-thumb logo-center">
+              <img class="logo" src="medias/entreprises/cco.png" alt="CCO SA" onerror="this.style.display='none';">
+              <div class="thumb-caption">
+                <span class="cat">Mai 2025</span>
+                <span class="title">Technicien stagiaire en automatisme</span>
+              </div>
+            </div>
+            <div class="tile-detail">
+              <button class="tile-back" type="button">← réduire</button>
+              <div class="tile-detail-inner">
+                <span class="tile-meta">CCO SA — immersion en unité de production industrielle</span>
+                <ul class="tile-list">
+                  <li>Analyse fonctionnelle d'une chaîne de production automatisée de savon</li>
+                  <li>Diagnostic et résolution de pannes (capteurs, actionneurs pneumatiques)</li>
+                  <li>Rédaction d'un guide de maintenance préventive</li>
+                </ul>
+                <div class="tile-footer">
+                  <a href="https://maligah.com/entreprises/details/complexe-cosmetique-de-louest?id=24241" target="_blank" rel="noopener" class="text-link">plateforme de l'entreprise</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- GECS SARL -->
+          <article class="tile" tabindex="0" role="button" aria-expanded="false">
+            <div class="tile-thumb logo-center">
+              <img class="logo" src="medias/entreprises/gecs.png" alt="GECS SARL" onerror="this.style.display='none';">
+              <div class="thumb-caption">
+                <span class="cat">Été 2022 — 2024</span>
+                <span class="title">Assistant technicien en installations électriques</span>
+              </div>
+            </div>
+            <div class="tile-detail">
+              <button class="tile-back" type="button">← réduire</button>
+              <div class="tile-detail-inner">
+                <span class="tile-meta">GECS SARL — chantiers d'électrification résidentielle et industrielle</span>
+                <ul class="tile-list">
+                  <li>Conception de plans d'implantation électrique (CAO)</li>
+                  <li>Lecture de schémas de câblage complexes</li>
+                  <li>Dimensionnement de parcs solaires et pose de panneaux photovoltaïques</li>
+                </ul>
+                <div class="tile-footer">
+                  <a href="https://www.facebook.com/teulogegaetan/?locale=fa_IR" target="_blank" rel="noopener" class="text-link">plateforme de l'entreprise</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+        CONTACT — icône au-dessus, texte en dessous
+        ============================================ -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <span class="eyebrow">06</span>
+        <h2>Contact</h2>
+        <div class="contact-row">
+          <!-- Complète ton adresse email ci-dessous -->
+          <a href="mailto:ton.email@exemple.com" class="contact-item">
+            <img src="medias/icons/mail.png" alt="">
+            <span>tfotsanickson@gmail.com</span>
+          </a>
+          <a href="tel:+33767544546" class="contact-item">
+            <img src="medias/icons/phone.png" alt="">
+            <span>+33 7 67 54 45 46</span>
+          </a>
+          <a href="https://www.linkedin.com/in/nickson-fotsa/" target="_blank" rel="noopener" class="contact-item">
+            <img src="medias/icons/linkedin.png" alt="">
+            <span>linkedin</span>
+          </a>
+          <a href="https://github.com/fotsanickson" target="_blank" rel="noopener" class="contact-item">
+            <img src="medias/icons/git.png" alt="">
+            <span>github</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="main.js"></script>
+    <script src="hero-animation.js"></script>
+  </body>
 </html>
